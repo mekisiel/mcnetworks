@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>Welcome To McNetworks</h1>
+    <p class="lead">You want some vlans with that?</p>
+  </div>
+  <h1>Place Order Here</h1>
+  <h3>Delete a Network</h3>
+    {% from "includes/_formhelpers.html" import render_field %}
+    <form method="POST" action="">
+      <div class="form-group">
+        {{ render_field(form.index, class_="form-control") }}
+      </div>
+      <form action="fulfill" method="POST">
+          <input class="btn btn-primary" type="submit">
+    </form>
+{% endblock %}

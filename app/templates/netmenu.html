@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Network Menu</h1>
+  <ul class="list-group">
+  <h3>Production: Large</h3>
+    {% for network in menu %}
+        {% if network.env == 'production' and network.size == 'large' %}
+      <li class="list-group-item">Record ID: {{ network.id }}, Network: {{ network.network }}/{{ network.mask }}, VLAN: {{ network.vlan }}, Name: {{ network.name }}, State: {{ network.state }}, Owner: {{ network.owner }}</a></li>
+        {% else %}{% endif %}
+    {% endfor %}
+  <ul class="list-group">
+  <h3>Production: Medium</h3>
+    {% for network in menu %}
+        {% if network.env == 'production' and network.size == 'medium' %}
+      <li class="list-group-item">Record ID: {{ network.id }}, Network: {{ network.network }}/{{ network.mask }}, VLAN: {{ network.vlan }}, Name: {{ network.name }}, State: {{ network.state }}, Owner: {{ network.owner }}</a></li>
+        {% else %}{% endif %}
+    {% endfor %}
+  <ul class="list-group">
+  <h3>Production: Small</h3>
+    {% for network in menu %}
+        {% if network.env == 'production' and network.size == 'small' %}
+      <li class="list-group-item">Record ID: {{ network.id }}, Network: {{ network.network }}/{{ network.mask }}, VLAN: {{ network.vlan }}, Name: {{ network.name }}, State: {{ network.state }}, Owner: {{ network.owner }}</a></li>
+        {% else %}{% endif %}
+    {% endfor %}
+  </ul>
+  <ul class="list-group">
+  <h3>Test: Large</h3>
+    {% for network in menu %}
+        {% if network.env == 'test' and network.size == 'large' %}
+      <li class="list-group-item">Record ID: {{ network.id }}, Network: {{ network.network }}/{{ network.mask }}, VLAN: {{ network.vlan }}, Name: {{ network.name }}, State: {{ network.state }}, Owner: {{ network.owner }}</a></li>
+        {% else %}{% endif %}
+    {% endfor %}
+  <ul class="list-group">
+  <h3>Test: Medium</h3>
+    {% for network in menu %}
+        {% if network.env == 'test' and network.size == 'medium' %}
+      <li class="list-group-item">Record ID: {{ network.id }}, Network: {{ network.network }}/{{ network.mask }}, VLAN: {{ network.vlan }}, Name: {{ network.name }}, State: {{ network.state }}, Owner: {{ network.owner }}</a></li>
+        {% else %}{% endif %}
+    {% endfor %}
+  <ul class="list-group">
+  <h3>Test: Small</h3>
+    {% for network in menu %}
+        {% if network.env == 'test' and network.size == 'small' %}
+      <li class="list-group-item">Record ID: {{ network.id }}, Network: {{ network.network }}/{{ network.mask }}, VLAN: {{ network.vlan }}, Name: {{ network.name }}, State: {{ network.state }}, Owner: {{ network.owner }}</a></li>
+        {% else %}{% endif %}
+    {% endfor %}
+  </ul>
+{% endblock %}
